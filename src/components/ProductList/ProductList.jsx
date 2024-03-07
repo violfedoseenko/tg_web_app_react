@@ -32,7 +32,7 @@ const ProductList = () => {
             queryId,
         }
         
-        fetch('http://5.35.16.191:8000/web-data', {
+        fetch('http://localhost:8000/web-data', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -74,8 +74,9 @@ const ProductList = () => {
 
     return (
         <div className={'list'}>
-            {products.map(item => (
+            {products.map((item) => (
                 <ProductItem
+                    key={`${item.id}_${item.title}`}
                     product={item}
                     onAdd={onAdd}
                     className={'item'}
