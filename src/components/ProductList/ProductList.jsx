@@ -31,7 +31,7 @@ const ProductList = () => {
             totalPrice: getTotalPrice(addedItems),
             queryId,
         }
-        fetch('http://http://localhost:8000', {
+        fetch('http://http://5.35.16.191:8000', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
